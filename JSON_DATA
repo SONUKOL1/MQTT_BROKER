@@ -204,6 +204,7 @@ void manual_control() {
       Serial.println("Device4 OFF");
     }
   }
+  client.publish("Ran", String(random(10000)).c_str());
   delay(100);
 }
 
@@ -240,5 +241,5 @@ void loop() {
   } else {
     manual_control();
   }
-  client.loop();
+  client.loop();  
 }
